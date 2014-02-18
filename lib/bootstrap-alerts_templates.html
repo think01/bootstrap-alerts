@@ -11,6 +11,10 @@
         <!--suppress CheckDtdReferences -->
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         {{/if}}
-        {{message}}
+        {{unless options.html}}
+            {{message}}
+        {{else}}
+            {{{message}}}
+        {{/unless}}
     </div>
 </template>
